@@ -1,5 +1,6 @@
 const main = document.querySelector("main");
 
+const logo_btn = document.querySelector("#logo-btn");
 const home_btn = document.querySelector(".home-btn");
 const about_btn = document.querySelector(".about-btn");
 const services_btn = document.querySelector(".services-btn");
@@ -10,20 +11,38 @@ const about = document.querySelector(".about");
 const services = document.querySelector(".services");
 const features = document.querySelector(".features");
 
-home_btn.onclick = (()=>{
+// Profile and Wallet section
+const profile_btn = document.querySelector(".profile-box");
+
+// Drop Down section
+const dropDownWrapper = document.querySelector(".drop-down-wrapper");
+
+logo_btn.onclick = (() => {
     var pos = home.offsetTop - home.offsetTop;
     main.scrollTop = pos;
     console.log(pos);
 });
 
-services_btn.onclick = (()=>{
+home_btn.onclick = (() => {
+    var pos = home.offsetTop - home.offsetTop;
+    main.scrollTop = pos;
+    console.log(pos);
+});
+
+services_btn.onclick = (() => {
     main.scrollTop = services.offsetTop - home.offsetTop;
 });
 
-features_btn.onclick = (()=>{
+features_btn.onclick = (() => {
     main.scrollTop = features.offsetTop - home.offsetTop;
 });
 
-about_btn.onclick = (()=>{
+about_btn.onclick = (() => {
     main.scrollTop = about.offsetTop - home.offsetTop;
 });
+
+// Profile Wallet event handling
+profile_btn.onclick = (() => {
+    dropDownWrapper.classList.toggle("hidden");
+    overlay.classList.toggle("hidden");
+})
