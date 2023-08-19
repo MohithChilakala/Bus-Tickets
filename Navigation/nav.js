@@ -46,3 +46,9 @@ profile_btn.onclick = (() => {
     dropDownWrapper.classList.toggle("hidden");
     overlay.classList.toggle("hidden");
 })
+
+VanillaTilt.init(document.querySelectorAll(".profile-box"), {
+    max: 10,
+    speed: 400,
+    glare: true,
+});
