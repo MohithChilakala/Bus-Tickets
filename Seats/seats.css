@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: rgb(10, 10, 10);
+    color: white;
+    width: 100vw;
+    height: 100vh;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+main {
+    margin: 1em 2em;
+}
+
+.bus-details {
+    margin-bottom: 2rem;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    justify-content: center;
+    align-items: center;
+}
+
+.prices {
+    display: flex;
+    gap: 1em;
+}
+
+.checked, .unchecked {
+    border: 1px solid white;
+    padding: 0.6em;
+    border-radius: 0.8em;
+    line-height: 1;
+    cursor: pointer;
+}
+
+.checked {
+    background-color: #ff7200;
+    border-color: brown;
+}
+
+.seats-wrapper {
+    display: flex;
+    gap: 7em;
+}
+
+.seats {
+    display: flex;
+    gap: 7em;
+}
+
+h3 {
+    text-align: center;
+    padding-bottom: 0.3em;
+    border-bottom: 0.7px solid white;
+    margin-bottom: 0.7em;
+}
+
+.seats > div > div {
+    display: flex;
+    gap: 4em;
+}
+
+.left, .right {
+    display: flex;
+    gap: 2em;
+}
+
+.left > div,.right > div {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.sleeper {
+    border: 1px solid white;
+    border-radius: 0.4em;
+    text-align: center;
+    padding: 1.5em 0.5em;
+    cursor: pointer;
+}
+
+.seat-info-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.seat-info-container > div {
+    display: flex;
+    gap: 1em;
+    align-items: center;
+}
+
+.seat-info-container > div > div {
+    width: 2.5em;
+    height: 5em;
+}
+
+.male {
+    border-color: rgb(24, 39, 108);
+}
+
+.female {
+    border-color: palevioletred;
+}
+
+.booked {
+    background-color: gray;
+    cursor: not-allowed;
+}
+
+.selected {
+    background-color: green;
+}
+
+.seat-info-container > div > div {
+    cursor: default;
+}
