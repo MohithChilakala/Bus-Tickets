@@ -5,9 +5,17 @@ JSON
     upperdeck: true,
     columns: [left, right],
     rows: total,
-    lower: [],
-    upper: [] 
-    // 0, 1, 2, 3 --> booked, available, female, male
+    seats: {
+        lower: {
+            price: [],
+            status: []
+        },
+        upper: {
+            price: [],
+            status: []
+        }
+    }
+    // status: 0, 1, 2, 3 --> booked, available, female, male
 }
 */
 
@@ -37,8 +45,8 @@ for(i = 1; i <= left_columns; i++) {
     lower_deck_left.innerHTML += "<div class=" + column + "></div>";
     upper_deck_left.innerHTML += "<div class=" + column + "></div>";
 
-    var ll_column = document.querySelector(".lower-deck > div > .left > ." + column);
-    var ul_column = document.querySelector(".upper-deck > div > .left > ." + column);
+    var ll_column = document.querySelector(".lower-deck > div > .left > ." + column); // add status[lower[seat_number]]
+    var ul_column = document.querySelector(".upper-deck > div > .left > ." + column); // add status[upper[seat_number]]
 
     for(j = 0; j < rows; j++) {
         var seat_number = i +  3 * j;
@@ -69,9 +77,18 @@ for(i = 1; i <= right_columns; i++) {
 var seats = document.getElementsByClassName("sleeper");
 var n = seats.length;
 for(var i = 0; i < n; i++) {
-    seats[i].onclick = function(e) {
+    seats[i].onclick = function() {
         const seat = document.getElementById(this.id);
         if(seat.classList.contains("selected")) seat.classList.remove("selected");
         else seat.classList.add("selected");
+    }
+}
+
+var prices1 = document.getElementsByClassName("unchecked");
+n = prices1.length;
+for(var i = 0; i < n; i++) {
+    prices1[i].onclick = function() {
+        const price = document.getElementById(this.id);
+        
     }
 }
