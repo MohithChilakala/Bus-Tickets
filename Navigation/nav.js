@@ -45,7 +45,14 @@ about_btn.onclick = (() => {
 profile_btn.onclick = (() => {
     dropDownWrapper.classList.toggle("hidden");
     overlay.classList.toggle("hidden");
-})
+});
+
+overlay.onclick = (() => {
+    if(dropDownWrapper.classList.contains("hidden") === false) {
+        dropDownWrapper.classList.add("hidden");
+        overlay.classList.add("hidden");
+    }
+});
 
 VanillaTilt.init(document.querySelectorAll(".profile-box"), {
     max: 10,
