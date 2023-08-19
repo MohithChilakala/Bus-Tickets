@@ -5,22 +5,22 @@ const loginBtn = document.querySelector("label.login");
 const signupLink = document.querySelector("form .signup-link a");
 const loginLink = document.querySelector("form .login-link a");
 
-signupBtn.onclick = (()=>{
+signupBtn.onclick = (() => {
     loginText.style.marginLeft = "-50%";
     loginForm.style.marginLeft = "-50%";
 });
 
-loginBtn.onclick = (()=>{
+loginBtn.onclick = (() => {
     loginText.style.marginLeft = "0%";
     loginForm.style.marginLeft = "0%";
 });
 
-signupLink.onclick = (()=>{
+signupLink.onclick = (() => {
     signupBtn.click();
     return false;
 });
 
-loginLink.onclick = (()=>{
+loginLink.onclick = (() => {
     loginBtn.click();
     return false;
 });
@@ -29,13 +29,14 @@ const overlay = document.querySelector(".overlay");
 
 const signin_btn = document.querySelector(".signin-btn");
 const signin = document.querySelector(".signin");
-signin_btn.onclick = (()=>{
+signin_btn.onclick = (() => {
     signin.style.display = "block";
     overlay.classList.remove("hidden");
+    dropDownWrapper.classList.add("hidden");
 });
 
 const close_btn = document.querySelector(".wrapper .close-div");
-close_btn.onclick = (()=>{
+close_btn.onclick = (() => {
     signin.style.display = "none";
     overlay.classList.add("hidden");
 });
