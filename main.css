@@ -36,7 +36,7 @@ section > .container {
 
 .container > .section-name > h2 {
   width: max-content;
-  margin: 0em auto 1em auto;
+  margin: 0em auto 2em auto;
 }
 
 .container > .section-info {
@@ -56,4 +56,67 @@ section > .container {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.image-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  border-radius: 12px;
+
+  position: relative;
+  /* box-shadow: 10px 10px 0 rgba(255, 255, 255, 0.8); */
+}
+
+.bus-image {
+  max-width: 100%;
+  height: auto;
+  /* filter: grayscale(100%); */
+
+  transition: all 0.3s ease-in-out;
+}
+
+/* .bus-image:hover {
+  filter: grayscale(0%); 
+} */
+
+/* .image-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); 
+  pointer-events: none;
+} */
+
+.services .section-info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 80px;
+}
+
+.services .section-info .service-info-cards {
+  width: 350px;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.277);
+  backdrop-filter: blur(5px);
+  /* filter: blur(1px); */
+  border-radius: 12px;
+}
+
+.service-info-cards .card-title {
+  font-size: 23px;
+  font-weight: 500;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.service-info-cards .card-desc {
+  text-align: center;
+  font-weight: 400;
+  margin-bottom: 30px;
 }
