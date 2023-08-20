@@ -33,6 +33,7 @@ main {
     align-items: center;
 }
 
+/*
 .prices {
     display: flex;
     gap: 1em;
@@ -50,6 +51,7 @@ main {
     background-color: #ff7200;
     border-color: brown;
 }
+*/
 
 .seats-wrapper {
     display: flex;

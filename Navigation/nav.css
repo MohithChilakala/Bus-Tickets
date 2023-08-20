@@ -54,14 +54,15 @@ ul li a:hover {
 }
 
 .menu .nav-profile-btn {
-  height: 35px;
+  height: 1.6rem;
 }
 
 .menu .profile-box {
   padding: 6px;
-  border-radius: 12px;
+  border-radius: 1em;
   cursor: pointer;
   background: rgba(255, 255, 255, 0.08);
+  margin-bottom: 1em;
 }
 
 .drop-down-wrapper {

@@ -1,25 +1,20 @@
 /*
 JSON
 {
-    prices: [],
+    travels: name,
+    arrival: time,
+    destiny: time,
     upperdeck: true,
     columns: [left, right],
     rows: total,
-    seats: {
-        lower: {
-            price: [],
-            status: []
-        },
-        upper: {
-            price: [],
-            status: []
-        }
-    }
+    lower: [],
+    upper: []
     // status: 0, 1, 2, 3 --> booked, available, female, male
 }
 */
 
-const prices = document.querySelector(".prices");
+// const prices = document.querySelector(".prices");
+
 const lower_deck = document.querySelector(".lower-deck");
 const upper_deck = document.querySelector(".upper-deck");
 const lower_deck_left = document.querySelector(".lower-deck > div > .left");
@@ -28,15 +23,17 @@ const upper_deck_left = document.querySelector(".upper-deck > div > .left");
 const upper_deck_right = document.querySelector(".upper-deck > div > .right");
 const status = ["booked", "available", "female", "male"];
 
-const available_prices = [1800, 1200, 800];
+// const available_prices = [1800, 1200, 800];
 const upper_deck_available = true;
 const left_columns = 1;
 const right_columns = 2;
 const rows = 5;
 
+/*
 available_prices.forEach((price)=>{
     prices.innerHTML += "<div class=\"unchecked\">" + price + "</div>";
 });
+*/
 
 if(upper_deck_available === false) upper_deck.style.display = "none";
 
@@ -76,19 +73,32 @@ for(i = 1; i <= right_columns; i++) {
 
 var seats = document.getElementsByClassName("sleeper");
 var n = seats.length;
+var selected = [];
+var count = 0;
 for(var i = 0; i < n; i++) {
     seats[i].onclick = function() {
         const seat = document.getElementById(this.id);
-        if(seat.classList.contains("selected")) seat.classList.remove("selected");
-        else seat.classList.add("selected");
-    }
-}
+        if(seat.classList.contains("selected")) {
+            seat.classList.remove("selected");
+            selected.splice(selected.indexOf(this.id), 1);
+            count--;
+        }
+        else {
+            seat.classList.add("selected");
+            selected.push(this.id);
+            count++;
+        }
 
-var prices1 = document.getElementsByClassName("unchecked");
-n = prices1.length;
-for(var i = 0; i < n; i++) {
-    prices1[i].onclick = function() {
-        const price = document.getElementById(this.id);
-        
+        selected_seats = document.querySelector(".selected-seats");
+        if(count === 0) {
+            selected_seats.style.display = "none";
+        } else {
+            selected_seats.style.display = "block";
+            selected_seats.innerHTML = "Selected: ";
+            selected = selected.sort();
+            selected.forEach((seat)=>{
+                selected_seats.innerHTML += seat + ", ";
+            });
+        }
     }
 }

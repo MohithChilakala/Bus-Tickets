@@ -29,16 +29,14 @@ const overlay = document.querySelector(".overlay");
 
 const signin_btn = document.querySelector(".signin-btn");
 const signin = document.querySelector(".signin");
-signin_btn.onclick = (() => {
+signin_btn.onclick = (()=>{
     signin.style.display = "block";
     overlay.classList.remove("hidden");
     dropDownWrapper.classList.add("hidden");
 });
 
 const close_btn = document.querySelector(".wrapper .close-div");
-close_btn.onclick = (() => {
+close_btn.onclick = (()=>{
     signin.style.display = "none";
     overlay.classList.add("hidden");
 });
-
-
