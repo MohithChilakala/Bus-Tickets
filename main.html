@@ -3,18 +3,30 @@
   <head>
     <title>Black bus</title>
     <link rel="stylesheet" href="main.css" />
-    <link rel="stylesheet" href="./Navigation/Authentication/authentication.css" />
+    <link
+      rel="stylesheet"
+      href="./Navigation/Authentication/authentication.css"
+    />
     <link rel="stylesheet" href="./Navigation/nav.css" />
-
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
     <script src="./Navigation/Authentication/authentication.js" async></script>
     <script src="./Navigation/nav.js" async></script>
-    <script type="text/javascript" src="./Resources/vanilla-tilt.js" async></script>
+    <!-- <script
+      type="text/javascript"
+      src="./Resources/vanilla-tilt.js"
+      async
+    ></script> -->
   </head>
   <body>
     <!-- navbar -->
     <nav>
       <div class="icon">
-        <a id="logo-btn" style="cursor: pointer;"><h2 class="logo">Blackbus</h2></a>
+        <a id="logo-btn" style="cursor: pointer"
+          ><h2 class="logo">Blackbus</h2></a
+        >
       </div>
       <div class="menu">
         <ul>
@@ -317,5 +329,32 @@
         </a>
       </div>
     </div>
+
+    <!-- wallet-balance-money => to change the balance amount -->
+
+    <div class="wallet-wrapper">
+      <div class="wallet">
+        <div class="wallet-balance">
+          <i class="bx bx-wallet bx-md"></i>
+          <h3>Total Balance</h3>
+          <h2 class="wallet-balance-money">999</h2>
+        </div>
+      </div>
+    </div>
+
+    <script src="./Resources/vanilla-tilt.js"></script>
+    <script>
+      VanillaTilt.init(document.querySelectorAll(".profile-box"), {
+        max: 10,
+        speed: 400,
+        glare: true,
+      });
+
+      VanillaTilt.init(document.querySelectorAll(".wallet-wrapper"), {
+        max: 2,
+        speed: 600,
+        glare: true,
+      });
+    </script>
   </body>
 </html>

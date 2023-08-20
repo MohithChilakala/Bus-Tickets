@@ -11,6 +11,9 @@ const about = document.querySelector(".about");
 const services = document.querySelector(".services");
 const features = document.querySelector(".features");
 
+//Sign in wrapper 
+// const signWrapper = document.querySelector(".signin");
+
 // Profile and Wallet section
 const profile_btn = document.querySelector(".profile-box");
 
@@ -41,21 +44,17 @@ about_btn.onclick = (() => {
     main.scrollTop = about.offsetTop - home.offsetTop;
 });
 
-// Profile Wallet event handling
+// Profile event handling
 profile_btn.onclick = (() => {
     dropDownWrapper.classList.toggle("hidden");
     overlay.classList.toggle("hidden");
+    // signWrapper.classList.add("hidden");
 });
 
+// Overlay handling 
 overlay.onclick = (() => {
-    if(dropDownWrapper.classList.contains("hidden") === false) {
+    if (dropDownWrapper.classList.contains("hidden") === false) {
         dropDownWrapper.classList.add("hidden");
         overlay.classList.add("hidden");
     }
-});
-
-VanillaTilt.init(document.querySelectorAll(".profile-box"), {
-    max: 10,
-    speed: 400,
-    glare: true,
 });
