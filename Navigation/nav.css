@@ -6,7 +6,7 @@ nav {
 }
 
 .logo {
-  color: #ff7200;
+  color: rgba(255, 114, 0, 0.87);
   font-size: 35px;
   font-family: Arial;
   padding-left: 20px;
@@ -99,7 +99,8 @@ ul li a:hover {
   box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.15);
 }
 
-.drop-down-wrapper .drop-down-menu hr {
+.drop-down-wrapper .drop-down-menu hr,
+.wallet-wrapper .wallet hr {
   margin: 10px 0 10px 0;
   height: 1px;
   box-shadow: 10px 0 10px rgba(0, 0, 0, 0.15);
@@ -116,7 +117,7 @@ ul li a:hover {
 /* Wallet section */
 .wallet-wrapper {
   width: 350px;
-  height: 300px;
+  height: 400px;
   background-color: rgba(255, 255, 255, 0.8);
   box-shadow: 5px 5px 30px rgba(255, 255, 255, 0.15);
   transition: all 0.3s ease-in-out;
@@ -135,9 +136,8 @@ ul li a:hover {
   padding: 10px;
 }
 
-.wallet-wrapper .wallet-balance {
+.wallet-wrapper .wallet .wallet-balance {
   box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.15);
-  display: inline-block;
   border-radius: 12px;
   padding: 8px;
   border-top: rgba(0, 0, 0, 0.15);
@@ -145,4 +145,35 @@ ul li a:hover {
   text-align: center;
   /* display: flex;
   flex-direction: column; */
+}
+
+.wallet-wrapper .wallet-balance .wallet-balance-money {
+  font-size: 30px;
+  color: rgba(0, 0, 0, 0.8);
+}
+
+.wallet-wrapper .wallet-options {
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+
+  transition: all 0.3s ease;
+}
+
+.wallet-wrapper .wallet-options button {
+  padding: 5px 10px;
+  border-radius: 6px;
+  border: none;
+  width: 50%;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 500;
+
+  transition: all 0.3s ease;
+}
+
+.wallet-button-active {
+  background: -webkit-linear-gradient(left, #a445b2, #fa4299);
+  color: #fff;
+  width: 100%;
 }

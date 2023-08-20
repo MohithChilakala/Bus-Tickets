@@ -16,6 +16,10 @@ const features = document.querySelector(".features");
 
 // Profile and Wallet section
 const profile_btn = document.querySelector(".profile-box");
+const walletWrapper = document.querySelector(".wallet-wrapper");
+
+const addMoney_btn = document.querySelector(".wallet-add-money-btn")
+const redeem_btn = document.querySelector(".wallet-transaction-btn")
 
 // Drop Down section
 const dropDownWrapper = document.querySelector(".drop-down-wrapper");
@@ -47,6 +51,7 @@ about_btn.onclick = (() => {
 // Profile event handling
 profile_btn.onclick = (() => {
     dropDownWrapper.classList.toggle("hidden");
+    walletWrapper.classList.toggle("hidden");
     overlay.classList.toggle("hidden");
     // signWrapper.classList.add("hidden");
 });
@@ -55,6 +60,22 @@ profile_btn.onclick = (() => {
 overlay.onclick = (() => {
     if (dropDownWrapper.classList.contains("hidden") === false) {
         dropDownWrapper.classList.add("hidden");
+        walletWrapper.classList.add("hidden");
         overlay.classList.add("hidden");
     }
 });
+
+// Wallet Handling
+addMoney_btn.addEventListener(
+    "click", () => {
+        addMoney_btn.classList.add("wallet-button-active")
+        redeem_btn.classList.remove("wallet-button-active");
+    }
+);
+
+redeem_btn.addEventListener(
+    "click", () => {
+        addMoney_btn.classList.remove("wallet-button-active");
+        redeem_btn.classList.add("wallet-button-active");
+    }
+)
