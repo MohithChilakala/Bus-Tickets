@@ -36,32 +36,59 @@
           <li><a class="about-btn">ABOUT</a></li>
           <li><a class="signin-btn">SIGNUP / LOGIN</a></li>
           <li class="profile-box">
-            <img src="./Resources/profile.png" alt="Profile Photo" class="nav-profile-btn" />
+            <img
+              src="./Resources/profile.png"
+              alt="Profile Photo"
+              class="nav-profile-btn"
+            />
           </li>
         </ul>
       </div>
     </nav>
 
     <main>
+      <section class="intro-booking-section">
+        <div class="intro-booking-container">
+          <div class="intro-container">
+            <i class="bx bx-current-location bx-md"></i>
+            <input type="text" required="required" />
+            <span>From</span>
+          </div>
+
+          <div class="intro-container">
+            <i class="bx bx-current-location bx-md"></i>
+            <input type="text" required="required" />
+            <span>To</span>
+          </div>
+
+          <div class="intro-date">
+            <div class="intro-date-container">
+              <input type="date" id="dateInput" name="date" />
+            </div>
+          </div>
+          <div class="intro-search-buses">
+            <h2>Search Buses</h2>
+          </div>
+        </div>
+      </section>
+
       <!-- Home-section -->
       <section class="home">
         <div class="container">
           <div class="section-name"><h2>Home</h2></div>
           <div class="section-info">
             <div class="info">
-              <div>
-                Welcome to BlackBus, your ultimate solution for effortless bus
-                bookings and exceptional travel encounters. Embrace the
-                convenience of our user-friendly platform, which simplifies
-                travel planning to enhance your journey. Our extensive network
-                of routes connects major cities, ensuring well-linked and
-                accessible travel. With a straightforward booking process,
-                competitive pricing, and trusted bus operators, we prioritize
-                your comfort, safety, and satisfaction. Stay informed with
-                real-time updates on your travel details, and our dedicated
-                support team is always ready to assist you. Discover the joy of
-                hassle-free travel and begin your adventure with BlackBus today!
-              </div>
+              Welcome to BlackBus, your ultimate solution for effortless bus
+              bookings and exceptional travel encounters. Embrace the
+              convenience of our user-friendly platform, which simplifies travel
+              planning to enhance your journey. Our extensive network of routes
+              connects major cities, ensuring well-linked and accessible travel.
+              With a straightforward booking process, competitive pricing, and
+              trusted bus operators, we prioritize your comfort, safety, and
+              satisfaction. Stay informed with real-time updates on your travel
+              details, and our dedicated support team is always ready to assist
+              you. Discover the joy of hassle-free travel and begin your
+              adventure with BlackBus today!
             </div>
 
             <div class="image-container">
@@ -132,49 +159,22 @@
         <div class="container">
           <div class="section-name"><h2>Features</h2></div>
           <div class="section-info">
-            <div class="info">
-              <div>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. In
-                hendrerit tellus in erat congue, sit amet condimentum justo
-                lobortis. Suspendisse sed lectus et nunc tristique elementum.
-                Donec molestie interdum eros vel eleifend. Curabitur tristique
-                sem vitae odio interdum, nec volutpat tortor commodo. Ut
-                sagittis interdum nibh vehicula consequat. Nullam tempor eget
-                nulla sed fringilla. Vivamus bibendum risus et ex faucibus, eget
-                iaculis tortor sollicitudin. Praesent eu lectus quis diam
-                porttitor fermentum. Nullam massa odio, sollicitudin in luctus
-                vel, blandit non odio. Cras at facilisis quam. Phasellus semper,
-                libero vel auctor maximus, nisl tellus accumsan risus, et
-                lacinia lectus ex vulputate.
-              </div>
-              <div>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. In
-                hendrerit tellus in erat congue, sit amet condimentum justo
-                lobortis. Suspendisse sed lectus et nunc tristique elementum.
-                Donec molestie interdum eros vel eleifend. Curabitur tristique
-                sem vitae odio interdum, nec volutpat tortor commodo. Ut
-                sagittis interdum nibh vehicula consequat. Nullam tempor eget
-                nulla sed fringilla. Vivamus bibendum risus et ex faucibus, eget
-                iaculis tortor sollicitudin. Praesent eu lectus quis diam
-                porttitor fermentum. Nullam massa odio, sollicitudin in luctus
-                vel, blandit non odio. Cras at facilisis quam. Phasellus semper,
-                libero vel auctor maximus, nisl tellus accumsan risus, et
-                lacinia lectus ex vulputate.
-              </div>
-            </div>
-
-            <div class="image-container">
-              <figure>
-                <img src="no_img.jpg" alt="Bus imgae" />
-                <figcaption>Bus image</figcaption>
-              </figure>
+            <ul class="features-list">
+              <li>Wide range of bus or coach services available</li>
+              <li>Reliable and punctual transportation solutions</li>
+              <li>Comfortable and spacious seating for passengers</li>
+              <li>Experienced and professional drivers</li>
+              <li>Modern and well-maintained fleet of black-colored buses</li>
+            </ul>
+            <div class="features-img">
+              <img src="./Resources/bus-2.jpg" alt="Bus" />
             </div>
           </div>
         </div>
       </section>
 
       <!-- about-section -->
-      <section class="about">
+      <!-- <section class="about">
         <div class="container">
           <div class="section-name"><h2>About</h2></div>
           <div class="section-info">
@@ -217,7 +217,7 @@
             </div>
           </div>
         </div>
-      </section>
+      </section> -->
     </main>
 
     <!-- authentication-form -->
@@ -292,11 +292,16 @@
     drop-down-gender => to manipulate gender 
     drop-down-name => to manipulate name
     drop-down-img => to change user image  -->
+    <!-- wallet-balance-money => to change the balance amount -->
 
     <div class="drop-down-wrapper hidden">
       <div class="drop-down-menu">
         <div class="user-info">
-          <img src="./Resources/profile.png" alt="User Profile" class="drop-down-img" />
+          <img
+            src="./Resources/profile.png"
+            alt="User Profile"
+            class="drop-down-img"
+          />
           <h3 class="drop-down-name">John Doe</h3>
         </div>
         <hr />
@@ -311,27 +316,23 @@
         <a href="#">
           <p class="drop-down-gender">Male</p>
         </a>
-        
       </div>
-    </div>
-
-    <!-- wallet-balance-money => to change the balance amount -->
-
-    <div class="wallet-wrapper hidden">
+      <hr />
       <div class="wallet">
         <div class="wallet-balance">
           <i class="bx bx-wallet bx-md"></i>
-          <h3>Total Balance</h3>
+          <h2>Total Balance</h2>
           <h2 class="wallet-balance-money">&#8377;999</h2>
         </div>
-        <hr />
-        <div class="wallet-options">
-          <button class="wallet-add-money-btn wallet-button-active">
-            Add Money
-          </button>
-          <button class="wallet-transaction-btn">Transaction</button>
+        <div class="add-btn-container">
+          <button class="wallet-add-money-button">Add</button>
         </div>
-        <div class="wallet-options-container"></div>
+        <div class="money-tkn-container">
+          <div class="money-tkn">299</div>
+          <div class="money-tkn">399</div>
+          <div class="money-tkn">599</div>
+          <div class="money-tkn">899</div>
+        </div>
       </div>
     </div>
 

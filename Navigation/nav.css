@@ -5,6 +5,10 @@ nav {
   background: rgb(10, 10, 10);
 }
 
+html {
+  font-size: 62.5%;
+}
+
 .logo {
   color: rgba(255, 114, 0, 0.87);
   font-size: 35px;
@@ -54,8 +58,14 @@ ul li a:hover {
 }
 
 .menu .nav-profile-btn {
-  height: 1.6rem;
+  height: 3.5rem;
 }
+
+/* .menu .profile-box {
+  padding: 0.6rem;
+  border-radius: 1.2rem;
+  height: 1.6rem;
+} */
 
 .menu .profile-box {
   padding: 6px;
@@ -70,16 +80,19 @@ ul li a:hover {
   position: absolute;
   top: 10%;
   right: 2%;
-  width: 350px;
-  border-radius: 12px;
+  width: 35rem;
+  border-radius: 1.2rem;
   z-index: 99;
-  box-shadow: 5px 5px 30px rgba(255, 255, 255, 0.15);
+  box-shadow: 5px 5px 3rem rgba(255, 255, 255, 0.15);
   transition: all 0.3s ease-in-out;
+
+  display: flex;
+  flex-direction: column;
 }
 
 .drop-down-wrapper .drop-down-menu {
   width: 100%;
-  padding: 20px;
+  padding: 2rem;
 }
 
 .drop-down-wrapper .drop-down-menu .user-info {
@@ -90,18 +103,17 @@ ul li a:hover {
 }
 
 .drop-down-wrapper .drop-down-menu .user-info h3 {
-  font-size: 25px;
-  color: rgba(0, 0, 0, 0.8);
+  font-size: 2.5rem;
+  color: #000;
 }
 
 .drop-down-wrapper .drop-down-menu .user-info .drop-down-img {
   padding: 5px;
-  border-radius: 12px;
-  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.15);
+  border-radius: 1.2rem;
+  box-shadow: 3px 3px 1rem rgba(0, 0, 0, 0.15);
 }
 
-.drop-down-wrapper .drop-down-menu hr,
-.wallet-wrapper .wallet hr {
+.drop-down-wrapper hr {
   margin: 10px 0 10px 0;
   height: 1px;
   box-shadow: 10px 0 10px rgba(0, 0, 0, 0.15);
@@ -112,69 +124,171 @@ ul li a:hover {
 }
 
 .drop-down-wrapper .drop-down-menu p {
+  font-size: 1.6rem;
   color: rgba(0, 0, 0, 0.8);
 }
 
 /* Wallet section */
-.wallet-wrapper {
-  width: 350px;
-  height: 400px;
-  background-color: rgba(255, 255, 255, 0.8);
-  box-shadow: 5px 5px 30px rgba(255, 255, 255, 0.15);
-  transition: all 0.3s ease-in-out;
-  backdrop-filter: blur(2px);
-  z-index: 99;
-  border-radius: 12px;
 
-  position: absolute;
-  top: 40%;
-  right: 2%;
-  /* Positioned absolutely with respect to nav  */
-
-  /* display: flex; */
-  /* justify-content: center; */
-
-  padding: 10px;
-}
-
-.wallet-wrapper .wallet .wallet-balance {
+.wallet .wallet-balance {
   box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.15);
   border-radius: 12px;
   padding: 8px;
   border-top: rgba(0, 0, 0, 0.15);
   border-left: rgba(0, 0, 0, 0.15);
   text-align: center;
-  /* display: flex;
-  flex-direction: column; */
+  margin: 0 1rem 1.8rem 1rem;
 }
 
-.wallet-wrapper .wallet-balance .wallet-balance-money {
-  font-size: 30px;
-  color: rgba(0, 0, 0, 0.8);
+.wallet-balance h2 {
+  font-size: 2rem;
 }
 
-.wallet-wrapper .wallet-options {
+.wallet-balance .wallet-balance-money {
+  font-size: 3rem;
+  color: #000;
+}
+
+.wallet .add-btn-container {
   display: flex;
   align-items: center;
-  overflow: hidden;
-
-  transition: all 0.3s ease;
+  justify-content: center;
 }
 
-.wallet-wrapper .wallet-options button {
-  padding: 5px 10px;
+.wallet-add-money-button {
+  padding: 5px 1rem;
   border-radius: 6px;
   border: none;
   width: 50%;
-  cursor: pointer;
-  font-size: 16px;
+  font-size: 1.8rem;
   font-weight: 500;
+  background-image: linear-gradient(to left, #fa4299, #a445b2, #fa4299);
+  color: #fff;
+  cursor: pointer;
 
-  transition: all 0.3s ease;
+  transition: all 0.4s;
+  background-size: 200%;
+  margin-bottom: 2.8rem;
 }
 
-.wallet-button-active {
-  background: -webkit-linear-gradient(left, #a445b2, #fa4299);
-  color: #fff;
+.wallet-add-money-button:hover {
+  background-position: right;
+}
+
+.hidden {
+  display: none;
+  pointer-events: none;
+}
+
+.wallet .money-tkn-container {
+  padding: 0 2rem;
+  display: flex;
+  justify-content: space-around;
+}
+
+.wallet .money-tkn-container .money-tkn {
+  padding: 1rem;
+  font-size: 1.6rem;
+}
+
+/* Intro booking section  */
+
+.intro-booking-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: rgba(255, 255, 255, 0.277);
+  backdrop-filter: blur(3px);
+  column-gap: 4.5rem;
+
+  margin: 20rem 30rem;
+  border-radius: 1.2rem;
+}
+
+.intro-booking-section .intro-container {
+  display: flex;
+  align-items: center;
+  position: relative;
+
+  box-shadow: 5px 5px 1rem rgba(0, 0, 0, 0.277);
+}
+
+.intro-booking-section .intro-container input {
+  border: none;
   width: 100%;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  padding: 2rem;
+  outline: none;
+  text-indent: 13px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.intro-booking-section .intro-container span {
+  position: absolute;
+  color: #222;
+  left: 20%;
+  font-size: 2.2rem;
+  font-weight: 500;
+  transition: all 0.3s;
+}
+
+.intro-booking-section .intro-container input:valid ~ span,
+.intro-booking-section .intro-container input:focus ~ span {
+  color: rgba(255, 114, 0, 0.87);
+  transform: translate(-18%, -70%);
+  font-size: 1.8rem;
+}
+
+.intro-booking-container i {
+  position: absolute;
+  left: 3%;
+  z-index: 99;
+  color: #000;
+}
+
+.intro-booking-container hr {
+  margin: 0 10px;
+  box-shadow: 2px 2px 5px rgba(255, 255, 255, 0.5);
+}
+
+.intro-booking-container .intro-date-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.intro-booking-container .intro-date-container label {
+  font-size: 2.2rem;
+}
+
+#dateInput {
+  padding: 2rem;
+  border: none;
+  background-color: #f8f8f8;
+  border-radius: 8px;
+}
+
+.intro-search-buses {
+  padding: 2rem;
+}
+
+.intro-search-buses h2 {
+  font-size: 2.2rem;
+  font-weight: 600;
+  padding: 2rem;
+  background-image: linear-gradient(to left, #fa4299, #a445b2, #fa4299);
+  border-radius: 1.2rem;
+
+  background-size: 200%;
+
+  transition: all 0.3s;
+}
+
+.intro-search-buses h2:hover {
+  background-position: right;
 }
